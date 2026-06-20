@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #000000;
+  --color-surface: #000000;
+  --color-surfaceHover: #121212;
+  --color-rim: #1E1E2A;
+  --color-primary: #fbbf24;
+  --color-primaryHover: #f59e0b;
+  --color-snow: #ffffff;
+  --color-mist: #a3a3a3;
+  --color-gold: #fbbf24;
+  --color-crimson: #ef4444;
+  --color-ghost: #111115;
+
+  --font-body: var(--font-dm), sans-serif;
+
+  --animate-shimmer: shimmer 1.4s ease-in-out infinite;
+  --animate-fade-in-up: fadeInUp 250ms ease-out both;
+  --animate-scale-in: scaleIn 200ms ease-out forwards;
+
+  @keyframes shimmer {
+    0% { background-position: -400px 0; }
+    100% { background-position: 400px 0; }
+  }
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(12px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scaleIn {
+    0% { opacity: 0; transform: scale(0.96); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-void);
+    color: var(--color-snow);
+  }
+}
