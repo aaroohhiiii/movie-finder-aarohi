@@ -170,16 +170,16 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="pt-6 sm:pt-16 pb-8 px-4">
+      <div className="pt-6 sm:pt-8 pb-8 px-4">
         <div className="max-w-7xl mx-auto">
           {!isSearchActive && !showFavorites && (
-            <div className="text-center mb-8 sm:mb-12 mt-2 sm:mt-6">
+            <div className="text-center mb-8 sm:mb-10">
               <p className="font-body text-mist text-[1.1rem] sm:text-xl font-medium tracking-wide">Find films you'll actually want to watch.</p>
             </div>
           )}
 
           {isSearchActive && (
-            <div className="text-center mb-8 sm:mb-12 mt-2 sm:mt-6 font-body text-mist text-[0.88rem]">
+            <div className="text-center mb-6 sm:mb-8 font-body text-snow text-[1.05rem] sm:text-[1.15rem] font-medium tracking-wide">
               {totalResults} results for "{query}"
             </div>
           )}
