@@ -109,7 +109,7 @@ export default function Home() {
     <main className="min-h-screen bg-transparent">
       <header className="sticky top-0 z-50 w-full bg-black/90 backdrop-blur-md border-b border-rim">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-auto sm:h-16 py-3 sm:py-0 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 relative">
-          
+
           <div className="w-full flex items-center justify-between sm:w-auto">
             {/* Left: Circle Logo */}
             <div className="flex items-center gap-2 sm:gap-3 shrink-0">
@@ -126,17 +126,15 @@ export default function Home() {
             <nav className="flex sm:hidden items-center gap-4 h-full">
               <button
                 onClick={() => setShowFavorites(false)}
-                className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full py-1 border-b-2 flex items-center ${
-                  !showFavorites ? 'text-primary border-primary' : 'text-mist border-transparent hover:text-white'
-                }`}
+                className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full py-1 border-b-2 flex items-center ${!showFavorites ? 'text-primary border-primary' : 'text-mist border-transparent hover:text-white'
+                  }`}
               >
                 Browse
               </button>
               <button
                 onClick={() => setShowFavorites(true)}
-                className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full py-1 border-b-2 flex items-center ${
-                  showFavorites ? 'text-primary border-primary' : 'text-mist border-transparent hover:text-white'
-                }`}
+                className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full py-1 border-b-2 flex items-center ${showFavorites ? 'text-primary border-primary' : 'text-mist border-transparent hover:text-white'
+                  }`}
               >
                 Favorites
               </button>
@@ -147,17 +145,15 @@ export default function Home() {
           <nav className="hidden sm:flex items-center gap-6 sm:gap-8 h-full absolute left-1/2 -translate-x-1/2">
             <button
               onClick={() => setShowFavorites(false)}
-              className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full border-b-2 flex items-center ${
-                !showFavorites ? 'text-primary border-primary' : 'text-mist border-transparent hover:text-white'
-              }`}
+              className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full border-b-2 flex items-center ${!showFavorites ? 'text-primary border-primary' : 'text-mist border-transparent hover:text-white'
+                }`}
             >
               Browse
             </button>
             <button
               onClick={() => setShowFavorites(true)}
-              className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full border-b-2 flex items-center ${
-                showFavorites ? 'text-primary border-primary' : 'text-mist border-transparent hover:text-white'
-              }`}
+              className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full border-b-2 flex items-center ${showFavorites ? 'text-primary border-primary' : 'text-mist border-transparent hover:text-white'
+                }`}
             >
               Favorites
             </button>
@@ -174,7 +170,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           {!isSearchActive && !showFavorites && (
             <div className="text-center mb-8 sm:mb-10">
-              <p className="font-body text-mist text-[1.1rem] sm:text-xl font-medium tracking-wide">Find films you'll actually want to watch.</p>
+              <p className="font-body text-snow text-[1.1rem] sm:text-xl font-medium tracking-wide">Browse Films worth your binge!</p>
             </div>
           )}
 
