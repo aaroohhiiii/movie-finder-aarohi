@@ -59,7 +59,7 @@ export default function MovieModal({ movieId, onClose, isFavorite, onFavoriteTog
       aria-labelledby="modal-title"
     >
       <div
-        className="bg-surface border border-rim rounded-none w-full h-full max-w-none max-h-none sm:rounded-2xl sm:max-w-[640px] sm:w-[90vw] sm:max-h-[90vh] overflow-y-auto relative animate-scale-in"
+        className="bg-surface border border-rim rounded-none w-full h-auto sm:h-fit max-w-none sm:rounded-2xl sm:max-w-[640px] sm:w-[90vw] sm:max-h-[90vh] overflow-y-auto relative animate-scale-in"
         onClick={(e) => e.stopPropagation()}
       >
         <button

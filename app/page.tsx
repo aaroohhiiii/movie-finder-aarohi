@@ -125,7 +125,7 @@ export default function Home() {
             <button
               onClick={() => setShowFavorites(false)}
               className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full border-b-2 flex items-center ${
-                !showFavorites ? 'text-primary border-primary' : 'text-[#888] border-transparent hover:text-white'
+                !showFavorites ? 'text-primary border-primary' : 'text-mist border-transparent hover:text-white'
               }`}
             >
               Browse
@@ -133,7 +133,7 @@ export default function Home() {
             <button
               onClick={() => setShowFavorites(true)}
               className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full border-b-2 flex items-center ${
-                showFavorites ? 'text-primary border-primary' : 'text-[#888] border-transparent hover:text-white'
+                showFavorites ? 'text-primary border-primary' : 'text-mist border-transparent hover:text-white'
               }`}
             >
               Favorites
@@ -147,10 +147,16 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="pt-8 pb-8 px-4">
+      <div className="pt-16 pb-8 px-4">
         <div className="max-w-7xl mx-auto">
+          {!isSearchActive && !showFavorites && (
+            <div className="text-center mb-12 mt-6">
+              <p className="font-body text-mist text-xl font-medium tracking-wide">Find films you'll actually want to watch.</p>
+            </div>
+          )}
+
           {isSearchActive && (
-            <div className="text-center mb-8 font-body text-mist text-[0.88rem]">
+            <div className="text-center mb-12 mt-6 font-body text-mist text-[0.88rem]">
               {totalResults} results for "{query}"
             </div>
           )}

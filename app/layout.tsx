@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`${dm.variable} font-body min-h-screen flex flex-col bg-void text-snow relative`}>
         {children}
         <footer className="text-center py-6 border-t border-rim mt-auto">
-          <p className="font-body text-mist text-[0.8rem]">Built for Jeevan — Aarohi Sharma</p>
+          <p className="font-body text-mist text-[0.8rem]">Built for Jeevan — Aarohi Gattewar</p>
         </footer>
       </body>
     </html>

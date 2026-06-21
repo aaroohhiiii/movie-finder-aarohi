@@ -12,7 +12,7 @@ export default function SearchBar({ value, onChange, placeholder = 'Search movie
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full h-10 px-4 pl-10 pr-10 bg-surface border border-rim rounded-full text-snow placeholder-mist focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-200 text-sm"
+        className="w-full h-10 px-4 pl-10 pr-10 bg-surface border border-[#2A2A3A] rounded-full text-snow placeholder-mist focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all duration-200 text-sm"
         aria-label="Search movies"
       />
       <svg

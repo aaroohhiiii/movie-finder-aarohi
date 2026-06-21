@@ -1,6 +1,6 @@
 export default function SkeletonCard() {
   return (
-    <div className="bg-surface rounded-2xl overflow-hidden border border-rim">
+    <div className="bg-surface rounded-2xl overflow-hidden border border-[#1E1E2A]">
       <div className="aspect-[2/3] bg-ghost animate-shimmer" style={{
         background: 'linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%)',
         backgroundSize: '800px 100%',
