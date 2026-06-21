@@ -108,20 +108,43 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-transparent">
       <header className="sticky top-0 z-50 w-full bg-black/90 backdrop-blur-md border-b border-rim">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-4 relative">
-          {/* Left: Circle Logo */}
-          <div className="flex items-center gap-3 shrink-0">
-            <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center text-black shrink-0 shadow-sm">
-              <svg viewBox="0 0 24 24" className="w-5 h-5 text-black" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                <circle cx="12" cy="12" r="5" fill="currentColor" />
-                <ellipse cx="12" cy="12" rx="9" ry="2.5" transform="rotate(-25 12 12)" />
-              </svg>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-auto sm:h-16 py-3 sm:py-0 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 relative">
+          
+          <div className="w-full flex items-center justify-between sm:w-auto">
+            {/* Left: Circle Logo */}
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white flex items-center justify-center text-black shrink-0 shadow-sm">
+                <svg viewBox="0 0 24 24" className="w-4 h-4 sm:w-5 sm:h-5 text-black" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                  <circle cx="12" cy="12" r="5" fill="currentColor" />
+                  <ellipse cx="12" cy="12" rx="9" ry="2.5" transform="rotate(-25 12 12)" />
+                </svg>
+              </div>
+              <span className="font-body font-bold text-white text-[1rem] sm:text-[1.1rem] tracking-tight">Movieletters</span>
             </div>
-            <span className="font-body font-bold text-white text-[1.1rem] tracking-tight">Movieletters</span>
+
+            {/* Mobile Navigation Links */}
+            <nav className="flex sm:hidden items-center gap-4 h-full">
+              <button
+                onClick={() => setShowFavorites(false)}
+                className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full py-1 border-b-2 flex items-center ${
+                  !showFavorites ? 'text-primary border-primary' : 'text-mist border-transparent hover:text-white'
+                }`}
+              >
+                Browse
+              </button>
+              <button
+                onClick={() => setShowFavorites(true)}
+                className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full py-1 border-b-2 flex items-center ${
+                  showFavorites ? 'text-primary border-primary' : 'text-mist border-transparent hover:text-white'
+                }`}
+              >
+                Favorites
+              </button>
+            </nav>
           </div>
 
-          {/* Middle: Navigation Links (Centered) */}
-          <nav className="flex items-center gap-6 sm:gap-8 h-full absolute left-1/2 -translate-x-1/2">
+          {/* Desktop Navigation Links (Centered) */}
+          <nav className="hidden sm:flex items-center gap-6 sm:gap-8 h-full absolute left-1/2 -translate-x-1/2">
             <button
               onClick={() => setShowFavorites(false)}
               className={`font-body font-semibold text-[0.88rem] tracking-wide transition-colors h-full border-b-2 flex items-center ${
@@ -141,22 +164,22 @@ export default function Home() {
           </nav>
 
           {/* Right: Search Bar */}
-          <div className="w-44 sm:w-60 md:w-72 shrink-0">
+          <div className="w-full sm:w-60 md:w-72 shrink-0">
             <SearchBar value={query} onChange={setQuery} placeholder="Search movies..." />
           </div>
         </div>
       </header>
 
-      <div className="pt-16 pb-8 px-4">
+      <div className="pt-6 sm:pt-16 pb-8 px-4">
         <div className="max-w-7xl mx-auto">
           {!isSearchActive && !showFavorites && (
-            <div className="text-center mb-12 mt-6">
-              <p className="font-body text-mist text-xl font-medium tracking-wide">Find films you'll actually want to watch.</p>
+            <div className="text-center mb-8 sm:mb-12 mt-2 sm:mt-6">
+              <p className="font-body text-mist text-[1.1rem] sm:text-xl font-medium tracking-wide">Find films you'll actually want to watch.</p>
             </div>
           )}
 
           {isSearchActive && (
-            <div className="text-center mb-12 mt-6 font-body text-mist text-[0.88rem]">
+            <div className="text-center mb-8 sm:mb-12 mt-2 sm:mt-6 font-body text-mist text-[0.88rem]">
               {totalResults} results for "{query}"
             </div>
           )}
